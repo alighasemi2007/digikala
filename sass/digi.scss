@@ -1,0 +1,59 @@
+@use "all";
+@use "ali";
+
+.border-none {
+    border: none !important;
+    outline: none !important;
+    outline: transparent !important;
+}
+.main-nav{
+    font-size: 0.8rem;
+    a{
+        padding: 1rem 0.4rem;
+    }
+}
+.shadow{
+    box-shadow: 1px 1px black;
+}
+.child-cat {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 80%;
+    box-shadow: -6px 11px 18px #e9e9e9;
+    overflow-y: scroll;
+    height: 200px;
+    right: 20px;
+    direction: ltr;
+    top:3.8rem;
+
+    &>li {
+        &>ul {
+            // همه محصولات
+            position: absolute;
+            top: 0px;
+            right: 6rem;
+            &>li {
+                &>div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    &>ul {
+                        width: 25%;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.parent-cat:hover {
+    .child-cat {
+        display: block;
+    }
+}
+header{
+    position: fixed;
+    background-color: white;
+    top: 0;
+}

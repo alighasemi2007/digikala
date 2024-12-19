@@ -1,0 +1,22 @@
+@use "all";
+@use "ali";
+@use "night";
+:root {
+    --bg-color: #2b2b2b;
+    --fg-color: rgba(255, 255, 255, 0.9);
+  }
+  header{
+    nav{
+        display: flex;
+        align-items: center;
+        &>ul{
+            display: flex;
+        }
+    }
+  }
+  .a{
+    text-align: center;
+  }
+  .a1{
+    right: 1rem;
+  }
